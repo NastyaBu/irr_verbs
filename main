@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include "reading_scanning_process.c"
+main()
+{
+	setlocale(LC_ALL, "Russian");
+
+    int cal;
+    cal=reading_scanning_process();
+	printf("Правильность выполнения задания %d %% \n", cal*10);
+
+	system("PAUSE");
+	return 0;
+}
