@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+CTEST(proverka_vozvrashaemoy_dlini, correct_len)
+{
+int slen(char str[])
+{
+    int len, i=0;
+    while(str[i]!='\0')i++;
+        len=i;
+
+    return len; // ne bolshe 14ti
+
+}
+double podschet_flg(double flg, char userverb[], char*ptr[])
+{
+        scanf("%s", userverb); // proverka na zapreshennie simvoli
+        flg = 0.0;
+        //stroka = {0};
+        char *stroka;
+        int i, n;
+        int lenusr[261]={0}, lenverb[261]={0};
+        lenusr[i] = slen(userverb);// proverka
+        lenverb[i] = slen(ptr[i + 1]);// proverka
+        stroka = ptr[i + 1];
+        //printf ("%s", stroka);
+
+        if (i == 1) lenverb[i]--;
+        if (lenusr[i] == lenverb[i])
+        {
+            for(n = 0; n < lenusr[i]; n++)
+            {
+                if(stroka[n] == userverb[n]) flg += 1.0;
+            }
+            flg = flg / lenusr[i];
+        }
+return flg;
+}
+double process(char* ptr[], double calc)
+{
+return flg;
+}
+double process(char* ptr[], double calc)
+{
+    int i/* lenusr[261]={0}, lenverb[261]={0},*/ ;
+    //char *stroka;
+    calc = 0;
+    double flg = 0.0; char userverb[1024] = "";
+    for (i = 0; i < 2; i++)
+    {
+        //printf("Dopishite %d formu glagola \n", i+2);
+    //  scanf("%s", userverb); // proverka na zapreshennie simvoli
+
+        //flg = 0.0;
+        //stroka = {0};
+        //lenusr[i] = slen(userverb);// proverka
+        //lenverb[i] = slen(ptr[i + 1]);// proverka
+        //stroka = ptr[i + 1];
+        //printf ("%s", stroka);
+
+    /*  if (i == 1) lenverb[i]--;
+        if (lenusr[i] == lenverb[i])
+        {
+            for(n=0; n < lenusr[i]; n++)
+            {
+                if(stroka[n] == userverb[n]) flg += 1.0;
+            }
+            flg = flg / lenusr[i];
+        }*/
+        //printf("\n %.3f flg \n", flg);
+        flg = podschet_flg(flg, userverb, ptr);
+        calc = calc + flg;
+    }
+    return calc;// proverka calc ne bol'she li 20i
+
+
+
+
+
+user_input = "gone"
+right_answer = "gone"
+
+grade = check(user_input, right_answer)
+
+expected_grade = 42;
+
+ASSERT_STR(exp_grade, grade)
+
+
